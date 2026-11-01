@@ -1,0 +1,3115 @@
+# Copyright (C) 2026 DEV3 Technologies
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: DEV3 AI Abandoned Cart & Win-back Emails for WooCommerce 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/dev3-ai-abandoned-cart-for-woocommerce\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-25T02:09:42+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: dev3-ai-abandoned-cart-for-woocommerce\n"
+
+#. Plugin Name of the plugin
+#: dev3-ai-abandoned-cart-for-woocommerce.php
+msgid "DEV3 AI Abandoned Cart & Win-back Emails for WooCommerce"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: dev3-ai-abandoned-cart-for-woocommerce.php
+msgid "https://dev3.tech/item/dev3-ai-abandoned-cart-for-woocommerce"
+msgstr ""
+
+#. Description of the plugin
+#: dev3-ai-abandoned-cart-for-woocommerce.php
+msgid "Capture abandoned carts, send AI-personalised recovery and win-back emails and SMS, and track recovered revenue."
+msgstr ""
+
+#. Author of the plugin
+#: dev3-ai-abandoned-cart-for-woocommerce.php
+msgid "DEV3 Technologies"
+msgstr ""
+
+#. Author URI of the plugin
+#: dev3-ai-abandoned-cart-for-woocommerce.php
+msgid "https://dev3.tech"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:41
+msgid "DEV3 AI Abandoned Cart"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:74
+#: build/admin.js:6
+msgid "Settings"
+msgstr ""
+
+#: includes/Ai/Copywriter.php:331
+msgid "Approve at least one template first."
+msgstr ""
+
+#: includes/Ai/Copywriter.php:371
+msgid "DEV3 AI did not return usable steps. Try again."
+msgstr ""
+
+#: includes/Capture/Tracker.php:416
+#: includes/Capture/Tracker.php:455
+msgid "The shopper placed an order."
+msgstr ""
+
+#. translators: 1: cart id, 2: step number
+#: includes/Capture/Tracker.php:497
+#, php-format
+msgid "Recovered by DEV3 AI Abandoned Cart (cart #%1$d, step %2$d)."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:212
+msgid "Unsupported image type."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:216
+msgid "The image data is invalid."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:292
+msgid "AI features are turned off."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:292
+msgid "Turn AI back on in API Config."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:294
+msgid "Storefront AI is turned off."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:294
+msgid "Turn storefront AI back on in API Config."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:49
+msgid "No Gemini API key is configured."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:50
+msgid "Open the plugin settings → API Config and paste a key from Google AI Studio."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:63
+msgid "AI paused: the monthly AI budget is reached."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:64
+msgid "Raise the monthly cap in API Config, or wait until the budget resets on the 1st of next month."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:80
+msgid "The AI service took too long to respond."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:81
+msgid "Try again, shorten the prompt, lower Max Output Tokens, or switch to the faster model."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:89
+msgid "Your server could not reach the AI service (Google Gemini API)."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:90
+msgid "Check the server's internet connection or firewall (outbound HTTPS to generativelanguage.googleapis.com)."
+msgstr ""
+
+#. translators: %s: transport error message.
+#: includes/Core3/Api/Api_Error.php:98
+#, php-format
+msgid "Request to the AI service failed: %s"
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:99
+#: includes/Core3/Api/Gemini_Client.php:250
+#: includes/Core3/Api/Gemini_Client.php:422
+msgid "Try again in a moment."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:128
+msgid "The Gemini API key is not valid."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:129
+msgid "Create a new key in Google AI Studio and paste it in API Config."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:137
+msgid "Your Gemini quota is exhausted."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:137
+msgid "AI rate limit reached."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:139
+msgid "Wait for the quota to reset, enable billing on your Google Cloud project, or switch to a model with remaining quota."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:140
+msgid "Wait a few seconds and try again."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:148
+msgid "This API key is not allowed to use Gemini."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:149
+msgid "Enable the Generative Language API for the key's project, and check any key restrictions (HTTP referrer / IP)."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:156
+msgid "The selected Gemini model is not available."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:157
+msgid "Pick another model in API Config — click \"Refresh models\" to load the ones your key can use."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:164
+msgid "The AI service is not available in your server's region."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:165
+msgid "Host the site in a supported region or use a key from a supported project."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:172
+msgid "The AI service is temporarily unavailable."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:173
+msgid "This is on Google's side. Try again shortly or switch models."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:180
+msgid "The AI service rejected the request."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:181
+msgid "Adjust the prompt or settings and try again."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:250
+msgid "The AI returned an incomplete embedding batch."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:368
+msgid "The AI blocked this image request for safety reasons."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:368
+msgid "The AI did not return an image."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:369
+#: includes/Core3/Api/Gemini_Client.php:472
+#: includes/Core3/Api/Gemini_Client.php:508
+msgid "Rephrase the prompt and try again."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:369
+msgid "Try again, or describe the image more concretely."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:421
+msgid "The AI returned malformed data."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:471
+msgid "The AI blocked this request for safety reasons."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:507
+msgid "The AI stopped because the response was flagged."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:515
+msgid "The AI ran out of output tokens before writing an answer."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:516
+msgid "Increase Max Output Tokens in API Config, or set Reasoning to \"Low\"."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:523
+msgid "The AI returned an empty response."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:524
+msgid "Try again or rephrase the prompt."
+msgstr ""
+
+#: includes/Core3/Api/Prompts.php:124
+msgid "Unknown prompt template."
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:90
+msgid "Unknown job type."
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:116
+msgid "The job could not be saved."
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:238
+#: build/admin.js:1
+#: build/admin.js:4
+#: build/admin.js:6
+msgid "Failed"
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:339
+#: includes/Core3/Rest/Core_Controller.php:112
+msgid "Job not found."
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:33
+#: includes/Core3/Core/Privacy.php:34
+#: includes/Core3/Core/Privacy.php:165
+msgid "AI usage log"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: includes/Core3/Core/Privacy.php:85
+#, php-format
+msgid "This site uses %s, which sends the content needed for AI features (for example product details, reviews or form text) to Google Gemini, operated by Google LLC, as a data processor. Only the fields needed for the requested feature are sent. Google's terms and privacy policy apply: https://ai.google.dev/gemini-api/terms"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:87
+msgid "The plugin keeps a usage log (time, feature, token counts and the user account that triggered the request) to show AI usage and costs to administrators. It does not store the prompts."
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:169
+msgid "Feature"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:173
+#: build/admin.js:1
+msgid "Model"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:177
+#: build/admin.js:1
+msgid "Tokens"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:181
+msgid "Date"
+msgstr ""
+
+#: includes/Core3/Data/Usage_Repository.php:194
+msgid "Deleted user"
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:72
+msgid "Your session has expired. Reload the editor and try again."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:75
+#: includes/Core3/Rest/Core_Controller.php:115
+msgid "You do not have permission to do that."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:94
+msgid "Cross-origin requests are not allowed."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:104
+msgid "Too many requests. Please wait a moment."
+msgstr ""
+
+#: includes/Data/Sequences.php:180
+#: build/admin.js:6
+msgid "Cart recovery"
+msgstr ""
+
+#: includes/Data/Sequences.php:212
+#: build/admin.js:6
+msgid "Win-back"
+msgstr ""
+
+#: includes/Data/Templates.php:205
+msgid "Cart · Friendly reminder"
+msgstr ""
+
+#: includes/Data/Templates.php:206
+msgid "{first_name}, you left something in your cart"
+msgstr ""
+
+#: includes/Data/Templates.php:207
+msgid "Your {top_product} is still waiting for you."
+msgstr ""
+
+#: includes/Data/Templates.php:208
+msgid "Still thinking it over?"
+msgstr ""
+
+#: includes/Data/Templates.php:209
+msgid ""
+"Hi {first_name},\n"
+"\n"
+"We saved your cart at {store_name} so you can pick up right where you left off. Your items are below."
+msgstr ""
+
+#: includes/Data/Templates.php:210
+#: includes/Engine/Renderer.php:94
+#: includes/Engine/Renderer.php:148
+msgid "Return to my cart"
+msgstr ""
+
+#: includes/Data/Templates.php:215
+msgid "Cart · Coupon offer"
+msgstr ""
+
+#: includes/Data/Templates.php:216
+msgid "A little something to help you decide: {coupon_amount} off"
+msgstr ""
+
+#: includes/Data/Templates.php:217
+msgid "Use {coupon_code} before {coupon_expiry}."
+msgstr ""
+
+#: includes/Data/Templates.php:218
+msgid "Here's {coupon_amount} off your cart"
+msgstr ""
+
+#: includes/Data/Templates.php:219
+msgid ""
+"Hi {first_name},\n"
+"\n"
+"Your cart is still saved. Complete your order with the code below and we'll take {coupon_amount} off. It's yours until {coupon_expiry}."
+msgstr ""
+
+#: includes/Data/Templates.php:220
+msgid "Claim my discount"
+msgstr ""
+
+#: includes/Data/Templates.php:225
+msgid "Cart · Last chance"
+msgstr ""
+
+#: includes/Data/Templates.php:226
+msgid "Last chance: your cart expires soon"
+msgstr ""
+
+#: includes/Data/Templates.php:227
+msgid "We can only hold your items a little longer."
+msgstr ""
+
+#: includes/Data/Templates.php:228
+msgid "Your cart is about to expire"
+msgstr ""
+
+#: includes/Data/Templates.php:229
+msgid ""
+"Hi {first_name},\n"
+"\n"
+"This is our last reminder. Your cart with {item_count} item(s) ({cart_total}) will be cleared soon. If you still want it, it's one click away."
+msgstr ""
+
+#: includes/Data/Templates.php:230
+msgid "Complete my order"
+msgstr ""
+
+#: includes/Data/Templates.php:234
+msgid "Cart · SMS reminder"
+msgstr ""
+
+#: includes/Data/Templates.php:236
+msgid "{store_name}: Hi {first_name}, your cart is saved. Finish your order here: {recovery_url} Reply STOP to opt out."
+msgstr ""
+
+#: includes/Data/Templates.php:240
+msgid "Win-back · We miss you"
+msgstr ""
+
+#: includes/Data/Templates.php:241
+msgid "We miss you, {first_name}! Here's {coupon_amount} off"
+msgstr ""
+
+#: includes/Data/Templates.php:242
+msgid "New arrivals and a welcome-back gift inside."
+msgstr ""
+
+#: includes/Data/Templates.php:243
+msgid "It's been a while"
+msgstr ""
+
+#: includes/Data/Templates.php:244
+msgid ""
+"Hi {first_name},\n"
+"\n"
+"It's been a while since your last order at {store_name}. Come back and save {coupon_amount} with code {coupon_code}. Your favourites are just a click away."
+msgstr ""
+
+#: includes/Data/Templates.php:245
+msgid "Shop again"
+msgstr ""
+
+#: includes/Data/Templates.php:250
+msgid "Win-back · Final offer"
+msgstr ""
+
+#: includes/Data/Templates.php:251
+msgid "Your welcome-back offer ends soon"
+msgstr ""
+
+#: includes/Data/Templates.php:252
+msgid "{coupon_code} expires {coupon_expiry}."
+msgstr ""
+
+#: includes/Data/Templates.php:253
+msgid "One last reminder"
+msgstr ""
+
+#: includes/Data/Templates.php:254
+msgid ""
+"Hi {first_name},\n"
+"\n"
+"Just a quick note: your {coupon_amount} welcome-back code {coupon_code} expires on {coupon_expiry}."
+msgstr ""
+
+#: includes/Data/Templates.php:255
+msgid "Use my code"
+msgstr ""
+
+#. translators: %d: cart id
+#: includes/Engine/Coupons.php:69
+#, php-format
+msgid "DEV3 AI recovery coupon for cart #%d"
+msgstr ""
+
+#: includes/Engine/Coupons.php:136
+#: includes/Engine/Coupons.php:163
+msgid "free shipping"
+msgstr ""
+
+#: includes/Engine/Mailer.php:35
+msgid "The recipient email address is not valid."
+msgstr ""
+
+#: includes/Engine/Mailer.php:81
+msgid "WordPress could not send the email. Check your mail/SMTP setup."
+msgstr ""
+
+#: includes/Engine/Quality.php:30
+msgid "The SMS text is empty."
+msgstr ""
+
+#: includes/Engine/Quality.php:33
+msgid "Add {recovery_url} so the shopper can return to the cart (it is appended automatically otherwise)."
+msgstr ""
+
+#. translators: %d: number of SMS segments
+#: includes/Engine/Quality.php:37
+#, php-format
+msgid "Longer than 160 characters: it will be sent as about %d SMS segments (links count as about 90 characters)."
+msgstr ""
+
+#: includes/Engine/Quality.php:45
+msgid "The subject line is empty."
+msgstr ""
+
+#: includes/Engine/Quality.php:47
+msgid "Subject lines over 70 characters get cut off on phones."
+msgstr ""
+
+#: includes/Engine/Quality.php:50
+msgid "The email body is empty."
+msgstr ""
+
+#: includes/Engine/Quality.php:53
+msgid "Add a preheader: it is the preview line inboxes show after the subject."
+msgstr ""
+
+#: includes/Engine/Quality.php:57
+msgid "The subject is mostly capital letters, which spam filters dislike."
+msgstr ""
+
+#: includes/Engine/Quality.php:60
+msgid "Repeated \"!!\" or \"???\" looks spammy."
+msgstr ""
+
+#: includes/Engine/Quality.php:64
+msgid "Uses a coupon tag: make sure the sequence step that sends it has a coupon (or an earlier step does)."
+msgstr ""
+
+#. translators: %s: list of words
+#: includes/Engine/Quality.php:87
+#, php-format
+msgid "Spam-trigger phrases: %s"
+msgstr ""
+
+#: includes/Engine/Renderer.php:77
+msgid "there"
+msgstr ""
+
+#: includes/Engine/Renderer.php:81
+msgid "your items"
+msgstr ""
+
+#. translators: %s: unsubscribe link
+#: includes/Engine/Renderer.php:167
+#, php-format
+msgid "You are receiving this because you started an order with us. %s"
+msgstr ""
+
+#: includes/Engine/Renderer.php:168
+msgid "Unsubscribe"
+msgstr ""
+
+#: includes/Engine/Renderer.php:204
+msgid "Reply STOP to opt out."
+msgstr ""
+
+#. translators: %d: quantity
+#: includes/Engine/Renderer.php:235
+#, php-format
+msgid "Qty %d"
+msgstr ""
+
+#: includes/Engine/Renderer.php:238
+#: build/admin.js:6
+msgid "Total"
+msgstr ""
+
+#. translators: 1: discount, 2: expiry date
+#: includes/Engine/Renderer.php:264
+#, php-format
+msgid "%1$s off · valid until %2$s"
+msgstr ""
+
+#. translators: %s: discount
+#: includes/Engine/Renderer.php:266
+#, php-format
+msgid "%s off"
+msgstr ""
+
+#: includes/Engine/Renderer.php:267
+msgid "Your code"
+msgstr ""
+
+#: includes/Engine/Renderer.php:300
+msgid "Sample product"
+msgstr ""
+
+#: includes/Engine/Renderer.php:307
+msgid "Alex"
+msgstr ""
+
+#: includes/Engine/Scheduler.php:243
+msgid "Template not found."
+msgstr ""
+
+#: includes/Engine/Scheduler.php:246
+msgid "Template is not approved."
+msgstr ""
+
+#: includes/Engine/Scheduler.php:249
+msgid "Template channel does not match the step."
+msgstr ""
+
+#: includes/Engine/Scheduler.php:252
+msgid "Cart total is below the step minimum."
+msgstr ""
+
+#: includes/Engine/Scheduler.php:256
+msgid "SMS is not configured."
+msgstr ""
+
+#: includes/Engine/Scheduler.php:259
+msgid "No SMS consent."
+msgstr ""
+
+#: includes/Engine/Scheduler.php:262
+msgid "No valid phone number."
+msgstr ""
+
+#: includes/Engine/Scheduler.php:265
+msgid "No email address."
+msgstr ""
+
+#: includes/Engine/Scheduler.php:356
+msgid "The cart is no longer open."
+msgstr ""
+
+#: includes/Engine/Scheduler.php:375
+#: includes/Engine/Scheduler.php:378
+#: includes/Frontend/Recovery.php:179
+#: includes/Frontend/Recovery.php:188
+msgid "Recipient unsubscribed."
+msgstr ""
+
+#: includes/Engine/Scheduler.php:631
+msgid "Only abandoned carts can receive reminders."
+msgstr ""
+
+#: includes/Engine/Scheduler.php:644
+msgid "This cart has no steps left to send."
+msgstr ""
+
+#: includes/Engine/Scheduler.php:656
+msgid "Stopped by an admin."
+msgstr ""
+
+#: includes/Engine/Scheduler.php:672
+msgid "Sequence restarted."
+msgstr ""
+
+#: includes/Engine/Sms.php:71
+msgid "SMS is not configured. Add your provider details under Settings → SMS."
+msgstr ""
+
+#: includes/Engine/Sms.php:74
+msgid "The phone number is not a valid international number."
+msgstr ""
+
+#. translators: %s: provider error
+#: includes/Engine/Sms.php:114
+#, php-format
+msgid "The SMS provider refused the message: %s"
+msgstr ""
+
+#: includes/Frontend/Recovery.php:65
+msgid "This link is no longer valid, but you can still browse the shop."
+msgstr ""
+
+#: includes/Frontend/Recovery.php:146
+msgid "Welcome back! Your cart has been restored."
+msgstr ""
+
+#: includes/Frontend/Recovery.php:148
+msgid "Sorry, the items from your cart are no longer available."
+msgstr ""
+
+#: includes/Frontend/Recovery.php:171
+msgid "This unsubscribe link is not valid."
+msgstr ""
+
+#: includes/Frontend/Recovery.php:192
+msgid "You have been unsubscribed. You will not receive cart reminders from us again."
+msgstr ""
+
+#: includes/Frontend/Save_Cart.php:50
+#: build/blocks.js:1
+msgid "Save my cart"
+msgstr ""
+
+#: includes/Frontend/Save_Cart.php:111
+#: build/blocks.js:1
+msgid "Not ready to check out?"
+msgstr ""
+
+#: includes/Frontend/Save_Cart.php:112
+#: build/blocks.js:1
+msgid "We'll email you a link to this cart so you can finish later on any device."
+msgstr ""
+
+#: includes/Frontend/Save_Cart.php:113
+#: build/blocks.js:1
+msgid "Email me my cart"
+msgstr ""
+
+#: includes/Frontend/Save_Cart.php:124
+#: build/admin.js:6
+#: build/blocks.js:1
+msgid "Email address"
+msgstr ""
+
+#: includes/Frontend/Save_Cart.php:125
+msgid "you@example.com"
+msgstr ""
+
+#: includes/Frontend/Save_Cart.php:152
+msgid "Your saved cart at {store_name}"
+msgstr ""
+
+#: includes/Frontend/Save_Cart.php:153
+msgid "Pick up where you left off, on any device."
+msgstr ""
+
+#: includes/Frontend/Save_Cart.php:154
+msgid "Your cart is saved"
+msgstr ""
+
+#: includes/Frontend/Save_Cart.php:155
+msgid "Here is the link to the cart you saved. It keeps your items and quantities."
+msgstr ""
+
+#: includes/Frontend/Save_Cart.php:156
+msgid "Open my cart"
+msgstr ""
+
+#: includes/Plugin.php:104
+msgid "Every 5 minutes (DEV3 AI Abandoned Cart)"
+msgstr ""
+
+#: includes/Plugin.php:178
+msgid "DEV3 AI Abandoned Cart & Win-back Emails needs WooCommerce to be active."
+msgstr ""
+
+#: includes/Privacy_Data.php:26
+#: includes/Privacy_Data.php:27
+msgid "Abandoned carts (DEV3 AI)"
+msgstr ""
+
+#: includes/Privacy_Data.php:45
+msgid "Abandoned carts"
+msgstr ""
+
+#: includes/Privacy_Data.php:49
+#: build/admin.js:6
+msgid "Email"
+msgstr ""
+
+#: includes/Privacy_Data.php:53
+#: build/admin.js:6
+msgid "Phone"
+msgstr ""
+
+#: includes/Privacy_Data.php:57
+#: build/admin.js:6
+msgid "Name"
+msgstr ""
+
+#: includes/Privacy_Data.php:61
+#: build/admin.js:6
+msgid "Items"
+msgstr ""
+
+#: includes/Privacy_Data.php:65
+#: build/admin.js:1
+#: build/admin.js:6
+msgid "Status"
+msgstr ""
+
+#: includes/Privacy_Data.php:69
+#: build/admin.js:6
+msgid "Consent"
+msgstr ""
+
+#: includes/Privacy_Data.php:73
+#: build/admin.js:6
+msgid "Captured"
+msgstr ""
+
+#: includes/Privacy_Data.php:84
+msgid "Cart reminder messages"
+msgstr ""
+
+#: includes/Privacy_Data.php:88
+#: build/admin.js:6
+msgid "Channel"
+msgstr ""
+
+#: includes/Privacy_Data.php:92
+#: build/admin.js:6
+msgid "Subject"
+msgstr ""
+
+#: includes/Privacy_Data.php:96
+#: build/admin.js:4
+#: build/admin.js:6
+msgid "Sent"
+msgstr ""
+
+#: includes/Privacy_Data.php:146
+msgid "When you enter your email address or phone number at checkout, we store it with the contents of your cart so we can send you a reminder if you do not complete your order. Reminders may include a personalised message written with Google Gemini, based on your first name and the products in your cart (we do not send your email address or phone number to Google). Every message has an unsubscribe link. We delete this data after the retention period set by the store."
+msgstr ""
+
+#: includes/Rest/Admin_Controller.php:216
+msgid "Only active carts can be marked abandoned."
+msgstr ""
+
+#: includes/Rest/Admin_Controller.php:230
+msgid "Unknown action."
+msgstr ""
+
+#: includes/Rest/Admin_Controller.php:313
+msgid "This message is no longer waiting for review."
+msgstr ""
+
+#: includes/Rest/Admin_Controller.php:337
+msgid "Choose approve or reject."
+msgstr ""
+
+#: includes/Rest/Admin_Controller.php:381
+msgid "Sequences are missing."
+msgstr ""
+
+#: includes/Rest/Admin_Controller.php:387
+msgid "Every step needs a template."
+msgstr ""
+
+#. translators: %s: template name
+#: includes/Rest/Admin_Controller.php:392
+#, php-format
+msgid "The template \"%s\" does not match the step channel."
+msgstr ""
+
+#: includes/Rest/Admin_Controller.php:408
+msgid "Template data is missing."
+msgstr ""
+
+#. translators: %s: sequence name
+#: includes/Rest/Admin_Controller.php:439
+#, php-format
+msgid "This template is used by the \"%s\" sequence. Change that step first."
+msgstr ""
+
+#. translators: %s: store name
+#: includes/Rest/Admin_Controller.php:522
+#, php-format
+msgid "%s: test message from your cart reminders. It works!"
+msgstr ""
+
+#: includes/Rest/Admin_Controller.php:561
+msgid "Describe what this message should do."
+msgstr ""
+
+#: includes/Rest/Admin_Controller.php:620
+msgid "There is no cart data for this period yet."
+msgstr ""
+
+#: includes/Rest/Admin_Controller.php:650
+msgid "Not found."
+msgstr ""
+
+#: includes/Rest/Public_Controller.php:129
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: includes/Rest/Public_Controller.php:132
+msgid "Please tick the box so we can email you."
+msgstr ""
+
+#: includes/Rest/Public_Controller.php:138
+msgid "Your cart is empty."
+msgstr ""
+
+#: includes/Rest/Public_Controller.php:143
+msgid "We could not save your cart for this email address."
+msgstr ""
+
+#: includes/Rest/Public_Controller.php:150
+msgid "Done! Check your inbox for a link to your cart."
+msgstr ""
+
+#: includes/Settings.php:41
+msgid "We save your email and cart so we can remind you about it if you don't finish your order. You can unsubscribe at any time."
+msgstr ""
+
+#: includes/Settings.php:42
+msgid "Email me a reminder about my cart and occasional offers."
+msgstr ""
+
+#: includes/Settings.php:43
+msgid "Text me a reminder about my cart (msg & data rates may apply, reply STOP to opt out)."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Request cancelled."
+msgstr ""
+
+#: build/admin.js:1
+msgid "You appear to be offline."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Check your internet connection, then try again."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Could not reach your WordPress site."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Check your connection or reload the editor."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Your session has expired."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save your work and reload the page."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Something went wrong."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Loading"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Generating…"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Generate with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Dismiss"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI paused: monthly budget reached"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Adjust the cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Try again"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Estimated AI spend this month"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI paused"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI off"
+msgstr ""
+
+#. translators: %s: cap
+#: build/admin.js:1
+#, js-format
+msgid "of %s cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI turned off"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI paused · cap reached"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Near cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Monthly AI budget used"
+msgstr ""
+
+#. translators: 1: requests, 2: tokens
+#: build/admin.js:1
+#, js-format
+msgid "%1$s requests · %2$s tokens"
+msgstr ""
+
+#. translators: %s: date
+#: build/admin.js:1
+#, js-format
+msgid "resets %s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Set a monthly cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Queued"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:6
+msgid "Running"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Done"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:4
+msgid "Cancelled"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Dismiss notification"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Choose from list"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Custom model ID…"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Google Gemini API key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Create a free key in Google AI Studio, paste it here and click “Validate & save”. The key is encrypted in your database and never sent to the browser."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Get an API key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "(opens in a new tab)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "The key is defined by the DEV3AC_GEMINI_API_KEY constant in wp-config.php."
+msgstr ""
+
+#: build/admin.js:1
+msgid "API key"
+msgstr ""
+
+#. translators: %d: number of models
+#: build/admin.js:1
+#, js-format
+msgid "Connected — %d models available to this key."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Validate & save"
+msgstr ""
+
+#: build/admin.js:1
+msgid "API key removed."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Remove key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "OpenSSL is not available on this server, so the key is only obfuscated. Consider defining DEV3AC_GEMINI_API_KEY in wp-config.php instead."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Models & generation"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Fast is used for most tasks; Pro for complex, long-form or structured work."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Refresh models"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Engine settings saved."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save engine settings"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Fast model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recommended: gemini-2.5-flash"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pro model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recommended: gemini-2.5-pro"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Image model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Used for image generation. Default: gemini-2.5-flash-image"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Embedding model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Used for semantic search. Default: gemini-embedding-001"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Temperature"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Lower = focused and consistent, higher = more creative (0–1)."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Max output tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Upper limit per answer."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reasoning"
+msgstr ""
+
+#: build/admin.js:1
+msgid "“Low” keeps generations fast and cheap; “Auto” lets the model think longer."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Low (fast)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Auto (model decides)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Budget & safety"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Costs are estimated from token counts and Google’s list prices. Check exact billing in Google AI Studio."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Budget and safety settings saved."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save budget & safety"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Monthly AI budget cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI pauses when the estimated spend this month reaches the cap. 0 = no cap."
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI features"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Turn off to stop every AI call. The plugin keeps working without AI."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Storefront AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Kill switch for visitor-facing AI. Visitors get the non-AI fallback."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Cache AI results"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reuse answers for identical requests to save tokens."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Mask personal data"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Replace emails, phone and card numbers before text is sent to Google Gemini."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pagination"
+msgstr ""
+
+#. translators: 1: first row, 2: last row, 3: total rows
+#: build/admin.js:1
+#, js-format
+msgid "%1$s–%2$s of %3$s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Previous page"
+msgstr ""
+
+#. translators: 1: page, 2: pages
+#: build/admin.js:1
+#, js-format
+msgid "Page %1$s of %2$s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Next page"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Actions"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Nothing here yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Sort by"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Default"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Est. cost"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No requests yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Token counts come from the AI provider’s usage metadata; costs are estimates. Check exact billing in Google AI Studio / Cloud Console."
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:5
+msgid "Period"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 7 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 30 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 90 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Total tokens"
+msgstr ""
+
+#. translators: 1: input, 2: output
+#: build/admin.js:1
+#, js-format
+msgid "%1$s in · %2$s out"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Avg. response"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Errors"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests per day"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests per day chart"
+msgstr ""
+
+#. translators: 1: date, 2: requests, 3: tokens
+#: build/admin.js:1
+#, js-format
+msgid "%1$s — %2$s requests, %3$s tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No requests in this period yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Usage appears here as soon as an AI feature runs."
+msgstr ""
+
+#: build/admin.js:1
+msgid "By task"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Task"
+msgstr ""
+
+#: build/admin.js:1
+msgid "By model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "By user"
+msgstr ""
+
+#: build/admin.js:1
+msgid "User"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recent requests"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No requests logged yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Time"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Where"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Time (s)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Plugin sections"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Section"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Close"
+msgstr ""
+
+#: build/admin.js:1
+msgid "DEV3 AI draft"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Accept"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Changes"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Side by side"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:6
+msgid "Draft"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Not saved yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Draft view"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Edit JSON"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Edit draft"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Current"
+msgstr ""
+
+#. translators: %s: token count
+#: build/admin.js:1
+#, js-format
+msgid "%s tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Cached"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reject"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:6
+msgid "Regenerate"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Done editing"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Edit"
+msgstr ""
+
+#: build/admin.js:1
+msgid "The JSON is not valid. Fix it or regenerate."
+msgstr ""
+
+#: build/admin.js:1
+msgid "just now"
+msgstr ""
+
+#. translators: %d: minutes
+#: build/admin.js:3
+#, js-format
+msgid "%d min"
+msgstr ""
+
+#: build/admin.js:3
+#, js-format
+msgid "%d h"
+msgstr ""
+
+#: build/admin.js:3
+#, js-format
+msgid "%d days"
+msgstr ""
+
+#: build/admin.js:4
+#, js-format
+msgid "in %s"
+msgstr ""
+
+#: build/admin.js:4
+#, js-format
+msgid "%s ago"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Active"
+msgstr ""
+
+#: build/admin.js:4
+#: build/admin.js:5
+msgid "Abandoned"
+msgstr ""
+
+#: build/admin.js:4
+#: build/admin.js:6
+msgid "Clicked"
+msgstr ""
+
+#: build/admin.js:4
+#: build/admin.js:5
+#: build/admin.js:6
+msgid "Recovered"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Bought anyway"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Lost"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Unsubscribed"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Stopped"
+msgstr ""
+
+#: build/admin.js:4
+#: build/admin.js:6
+msgid "Scheduled"
+msgstr ""
+
+#: build/admin.js:4
+#: build/admin.js:6
+msgid "Skipped"
+msgstr ""
+
+#: build/admin.js:4
+#: build/admin.js:6
+msgid "Template"
+msgstr ""
+
+#: build/admin.js:4
+msgid "AI · reviewed"
+msgstr ""
+
+#: build/admin.js:4
+msgid "AI · auto-approved"
+msgstr ""
+
+#: build/admin.js:4
+msgid "AI copy queued"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Waiting for review"
+msgstr ""
+
+#: build/admin.js:4
+msgid "AI approved"
+msgstr ""
+
+#: build/admin.js:4
+msgid "AI auto-approved"
+msgstr ""
+
+#: build/admin.js:4
+msgid "AI rejected"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Review timed out"
+msgstr ""
+
+#: build/admin.js:4
+msgid "AI failed"
+msgstr ""
+
+#: build/admin.js:4
+#: build/admin.js:6
+msgid "In review"
+msgstr ""
+
+#: build/admin.js:4
+#: build/admin.js:6
+msgid "Opened"
+msgstr ""
+
+#: build/admin.js:4
+msgid "min"
+msgstr ""
+
+#: build/admin.js:4
+msgid "h"
+msgstr ""
+
+#: build/admin.js:4
+msgid "days"
+msgstr ""
+
+#: build/admin.js:4
+msgid "No coupon"
+msgstr ""
+
+#: build/admin.js:4
+#: build/admin.js:6
+msgid "Free shipping"
+msgstr ""
+
+#. translators: 1: amount, 2: days
+#: build/admin.js:5
+#, js-format
+msgid "%1$s off · %2$d days"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Abandoned value"
+msgstr ""
+
+#: build/admin.js:5
+#: build/admin.js:6
+msgid "Recovered revenue"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Legend"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Show chart"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Show table"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Abandoned and recovered value per day"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Day"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Bar chart of abandoned value and recovered revenue per day"
+msgstr ""
+
+#: build/admin.js:5
+msgid "No abandoned carts in this period yet."
+msgstr ""
+
+#: build/admin.js:5
+msgid "7 days"
+msgstr ""
+
+#: build/admin.js:5
+msgid "30 days"
+msgstr ""
+
+#: build/admin.js:5
+msgid "90 days"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Carts captured at checkout, the reminders that went out, and the orders they brought back."
+msgstr ""
+
+#. translators: 1: abandoned, 2: sent, 3: AI drafts
+#: build/admin.js:6
+#, js-format
+msgid "Scheduler ran: %1$d newly abandoned, %2$d sent, %3$d AI drafts."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Run scheduler now"
+msgstr ""
+
+#: build/admin.js:6
+msgid "WooCommerce is not active"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Activate WooCommerce to capture carts."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Connect DEV3 AI (optional)"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Add your API key"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Recovery emails already work with your approved templates. Add a Google Gemini key to personalise each email for the shopper's cart, with every AI draft reviewed by you first."
+msgstr ""
+
+#. translators: %d: count
+#: build/admin.js:6
+#, js-format
+msgid "%d AI drafts are waiting for your review"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Open review queue"
+msgstr ""
+
+#: build/admin.js:6
+msgid "They wait for you (up to the hold time), then the approved template copy is sent instead."
+msgstr ""
+
+#: build/admin.js:6
+msgid "If you do not review them before their send time, the approved template copy is sent instead."
+msgstr ""
+
+#. translators: %d: orders
+#: build/admin.js:6
+#, js-format
+msgid "%d recovered orders"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Recovery rate"
+msgstr ""
+
+#. translators: %d: carts
+#: build/admin.js:6
+#, js-format
+msgid "of %d abandoned carts"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Still recoverable"
+msgstr ""
+
+#. translators: %d: carts
+#: build/admin.js:6
+#, js-format
+msgid "%d carts in a sequence"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Carts captured"
+msgstr ""
+
+#. translators: %s: value
+#: build/admin.js:6
+#, js-format
+msgid "%s abandoned in total"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Messages sent"
+msgstr ""
+
+#. translators: 1: open rate, 2: click rate
+#: build/admin.js:6
+#, js-format
+msgid "%1$s%% opened · %2$s%% clicked"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Coupons redeemed"
+msgstr ""
+
+#. translators: %d: AI messages
+#: build/admin.js:6
+#, js-format
+msgid "%d messages used AI copy"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Abandoned vs recovered"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Daily value of carts that were abandoned and of orders brought back by reminders."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Step funnel"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Sent → opened → clicked → recovered, per sequence step."
+msgstr ""
+
+#: build/admin.js:6
+msgid "No messages sent yet"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Numbers appear once the first reminders go out."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Step"
+msgstr ""
+
+#: build/admin.js:6
+msgid "email"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Most abandoned products"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Nothing abandoned yet"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Product"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Carts"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Value"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Recent recoveries"
+msgstr ""
+
+#: build/admin.js:6
+msgid "No recoveries yet"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Recovered orders show up here with the step that won them back."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Customer"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Type"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Cart"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Order"
+msgstr ""
+
+#: build/admin.js:6
+msgid "When"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Recovery insights by DEV3 AI"
+msgstr ""
+
+#: build/admin.js:6
+msgid "A plain-language read of these numbers with suggestions. It changes nothing on its own."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Explain my numbers with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:6
+msgid "What we see"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Try next"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Refresh"
+msgstr ""
+
+#. translators: 1: time, 2: time
+#: build/admin.js:6
+#, js-format
+msgid "Scheduler last ran %1$s · next run %2$s (WP-Cron, every 5 minutes)."
+msgstr ""
+
+#: build/admin.js:6
+msgid "due now"
+msgstr ""
+
+#: build/admin.js:6
+msgid "The scheduler has not run yet. It runs every 5 minutes through WP-Cron."
+msgstr ""
+
+#: build/admin.js:6
+msgid "SMS consent"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Sequence"
+msgstr ""
+
+#. translators: 1: name, 2: sent, 3: total
+#: build/admin.js:6
+#, js-format
+msgid "%1$s · %2$d of %3$d steps done"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Next message"
+msgstr ""
+
+#: build/admin.js:6
+msgid "coupon used"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Timeline"
+msgstr ""
+
+#: build/admin.js:6
+msgid "No messages yet."
+msgstr ""
+
+#. translators: 1: step, 2: channel
+#: build/admin.js:6
+#, js-format
+msgid "Step %1$d · %2$s"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Mark abandoned now"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Send next step now"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Stop sequence"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Restart sequence"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Recovery link copied."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Copy recovery link"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Delete"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Cart deleted."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Message sent."
+msgstr ""
+
+#. translators: %s: result
+#: build/admin.js:6
+#, js-format
+msgid "Result: %s"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Sequence stopped."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Sequence restarted from step 1."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Cart marked abandoned. Step 1 is scheduled."
+msgstr ""
+
+#: build/admin.js:6
+msgid "All"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Every cart captured at checkout, with its consent, sequence progress and outcome."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Cart status"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Search carts"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Search email, name or phone"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Search"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Captured carts"
+msgstr ""
+
+#: build/admin.js:6
+msgid "No carts match your search"
+msgstr ""
+
+#: build/admin.js:6
+msgid "No carts here yet"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Carts appear as soon as a shopper types their email at checkout (classic or block)."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Shopper"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Progress"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Last activity"
+msgstr ""
+
+#. translators: 1: id, 2: total
+#: build/admin.js:6
+#, js-format
+msgid "Cart #%1$d · %2$s"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Delete this cart?"
+msgstr ""
+
+#: build/admin.js:6
+msgid "The cart, its messages and its timeline are removed. This cannot be undone."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Cancel"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Delete cart"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Preheader"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Heading"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Message"
+msgstr ""
+
+#: build/admin.js:6
+#: build/blocks.js:1
+msgid "Button"
+msgstr ""
+
+#: build/admin.js:6
+msgid "SMS text"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Approved. It will send at its scheduled time."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Rejected. The approved template copy will be sent instead."
+msgstr ""
+
+#. translators: 1: name, 2: step
+#: build/admin.js:6
+#, js-format
+msgid "%1$s · step %2$d"
+msgstr ""
+
+#. translators: %s: relative time
+#: build/admin.js:6
+#, js-format
+msgid "Sends %s"
+msgstr ""
+
+#. translators: %s: template
+#: build/admin.js:6
+#, js-format
+msgid "DEV3 AI draft vs \"%s\""
+msgstr ""
+
+#: build/admin.js:6
+msgid "Approve & schedule"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Preview full email"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Email preview"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Review queue"
+msgstr ""
+
+#: build/admin.js:6
+msgid "DEV3 AI personalises reminders for each cart. Nothing AI-written is sent until you approve it, unless you turned on auto-approve for that template."
+msgstr ""
+
+#. translators: %d: hours
+#: build/admin.js:6
+#, js-format
+msgid "Unreviewed drafts hold their message for up to %d hours after the send time; then the approved template copy is sent."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Unreviewed drafts are skipped at send time: the approved template copy is sent instead."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Change in Settings"
+msgstr ""
+
+#: build/admin.js:6
+msgid "All caught up"
+msgstr ""
+
+#: build/admin.js:6
+msgid "New AI drafts appear here when a cart reaches a step whose template has AI personalisation on."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Manage templates"
+msgstr ""
+
+#. translators: %s: date
+#: build/admin.js:6
+#, js-format
+msgid "Oldest scheduled: %s"
+msgstr ""
+
+#: build/admin.js:6
+msgid "draft"
+msgstr ""
+
+#. translators: 1: step, 2: delay
+#: build/admin.js:6
+#, js-format
+msgid "Step %1$d · after %2$s"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Template not approved: step is skipped"
+msgstr ""
+
+#: build/admin.js:6
+msgid "SMS not configured: skipped"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Move up"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Remove step"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Wait after enrolment"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Wait after abandonment"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Wait after previous step"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Unit"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Minutes"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Hours"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Days"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Choose a template"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Unique coupon in this step"
+msgstr ""
+
+#: build/admin.js:6
+msgid "A single-use code locked to the shopper's email."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Discount"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Percent off"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Fixed amount off"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Percent"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Amount"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Valid for (days)"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Minimum spend"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Sequences"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Multi-step reminders. Cart recovery starts when a cart is abandoned; win-back starts when a customer has not ordered for a while. Purchases and unsubscribes stop a sequence."
+msgstr ""
+
+#: build/admin.js:6
+msgid "New cart sequence"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Add sequence"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Sequences saved."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Save sequences"
+msgstr ""
+
+#: build/admin.js:6
+msgid "You have unsaved changes."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Untitled sequence"
+msgstr ""
+
+#. translators: %d: days
+#: build/admin.js:6
+#, js-format
+msgid "Win-back: customers whose last order is %d+ days old."
+msgstr ""
+
+#. translators: %d: minutes
+#: build/admin.js:6
+#, js-format
+msgid "Cart recovery: starts %d minutes after the last cart activity."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Off"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Build with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Enabled"
+msgstr ""
+
+#: build/admin.js:6
+msgid "One sequence per type runs at a time."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Add email step"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Add SMS step"
+msgstr ""
+
+#: build/admin.js:6
+msgid "DEV3 AI · Suggested sequence"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Based on your store's recovery numbers. Nothing changes until you apply and save it."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Discard"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Draft steps applied. Review them and click Save sequences."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Apply these steps"
+msgstr ""
+
+#: build/admin.js:6
+msgid "DEV3 AI is designing your sequence…"
+msgstr ""
+
+#: build/admin.js:6
+msgid "After"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Body"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Template approved. Sequences can send it now."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Saved as draft. Approve it before it can be sent."
+msgstr ""
+
+#: build/admin.js:6
+msgid "New template"
+msgstr ""
+
+#: build/admin.js:6
+msgid "All templates"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Drafts never send. Approve the template to use it in a sequence."
+msgstr ""
+
+#. translators: %s: date
+#: build/admin.js:6
+#, js-format
+msgid "Approved %s. Editing the copy moves it back to draft until you approve it again."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Send test"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Save draft"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Save & approve"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Content"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Approved"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Template name"
+msgstr ""
+
+#. translators: %d: characters
+#: build/admin.js:6
+#, js-format
+msgid "About %d characters after merge tags. 160 fits in one SMS."
+msgstr ""
+
+#: build/admin.js:6
+msgid "The preview line inboxes show after the subject."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Plain text or simple HTML. Blank lines start new paragraphs. The cart table, coupon box, button and unsubscribe link are added automatically."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Button text"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Show the cart items table"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Merge tags"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Insert:"
+msgstr ""
+
+#: build/admin.js:6
+msgid "DEV3 AI personalisation"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Personalise each message with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:6
+msgid "DEV3 AI rewrites the subject, heading and message for each shopper's cart (first name and products only), keeping this template's intent."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Auto-approve AI copy for this template"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Off (recommended): every AI draft waits in the Review queue. On: AI copy is sent without review."
+msgstr ""
+
+#: build/admin.js:6
+msgid "AI-written emails from this template will be sent without a human review."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Write with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Describe the message; DEV3 AI drafts the copy. You review it before anything changes."
+msgstr ""
+
+#: build/admin.js:6
+msgid "What should this message do?"
+msgstr ""
+
+#: build/admin.js:6
+msgid "e.g. Second reminder for a cart of skincare products; mention the 10% code and that stock is limited."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Offer (optional)"
+msgstr ""
+
+#: build/admin.js:6
+msgid "10% off for 3 days"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Tone"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Use this draft"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Draft applied to the editor. Save it, then approve it when you are happy."
+msgstr ""
+
+#: build/admin.js:6
+msgid "More subject ideas:"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Preview"
+msgstr ""
+
+#: build/admin.js:6
+msgid "With a sample cart from your store."
+msgstr ""
+
+#: build/admin.js:6
+msgid "With coupon"
+msgstr ""
+
+#: build/admin.js:6
+msgid "(no subject)"
+msgstr ""
+
+#. translators: %d: characters
+#: build/admin.js:6
+#, js-format
+msgid "%d characters"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Quality checks"
+msgstr ""
+
+#: build/admin.js:6
+msgid "No problems found."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Fix"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Tip"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Delete template"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Send a test SMS"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Send a test email"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Uses a sample cart and a preview coupon. Unsaved changes are included."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Test sent."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Phone number"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Delete this template?"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Template deleted."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Templates"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Approved copy for every reminder. With DEV3 AI personalisation on, each send is tailored to the cart and reviewed by you first."
+msgstr ""
+
+#: build/admin.js:6
+msgid "New SMS"
+msgstr ""
+
+#: build/admin.js:6
+msgid "New email"
+msgstr ""
+
+#: build/admin.js:6
+msgid "No templates yet"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Create a template"
+msgstr ""
+
+#: build/admin.js:6
+msgid "DEV3 AI"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Auto-approve"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Reviewed"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Used in"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Messages"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Every scheduled, sent, skipped and failed email and SMS, with where its copy came from."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Message status"
+msgstr ""
+
+#: build/admin.js:6
+msgid "All channels"
+msgstr ""
+
+#: build/admin.js:6
+msgid "No messages here"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Messages are scheduled when a cart is abandoned."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Recipient"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Copy"
+msgstr ""
+
+#: build/admin.js:6
+msgid "SMS"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Open cart"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Sent email"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Capture & consent"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Sending & timing"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Coupons"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Data & privacy"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Best hours"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Quiet hours"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Max shift (hours)"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Opens and clicks by hour of day"
+msgstr ""
+
+#. translators: %d: events
+#: build/admin.js:6
+#, js-format
+msgid "Opens + clicks by shopper-local hour, last 90 days (%d events)."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Save settings"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Settings saved."
+msgstr ""
+
+#: build/admin.js:6
+msgid "How carts are captured, when reminders go out and how shoppers' consent is handled."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Settings sections"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Cart capture"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Capture abandoned carts"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Classic checkout"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Block checkout"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Logged-in customers"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Link carts to the account email without waiting for checkout."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Abandoned after (minutes)"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Minutes without cart activity before a cart counts as abandoned."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Minimum cart value"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Never capture carts of these roles"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Consent (GDPR)"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Shown under the email field on the classic and block checkout."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Consent mode"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Notice: tell shoppers their cart is saved (default)"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Opt-in: capture only after the shopper ticks a box"
+msgstr ""
+
+#: build/admin.js:6
+msgid "None: no notice (outside GDPR regions only)"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Nothing personal is stored until the box is ticked. Win-back only reaches customers who opted in."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Notice text"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Checkbox label"
+msgstr ""
+
+#: build/admin.js:6
+msgid "SMS opt-in checkbox label"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Shown when SMS is on. SMS is only ever sent to shoppers who tick it."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Sending"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Send reminders"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Turn off to pause all sending; carts are still captured."
+msgstr ""
+
+#: build/admin.js:6
+msgid "From name"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Empty = WooCommerce email settings."
+msgstr ""
+
+#: build/admin.js:6
+msgid "From address"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Recovery link opens"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Checkout"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Mark lost after (days)"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Days after the last step with no order."
+msgstr ""
+
+#: build/admin.js:6
+msgid "AI review rules"
+msgstr ""
+
+#: build/admin.js:6
+msgid "If an AI draft is not reviewed in time"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Send the approved template copy at the scheduled time"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Hold the message, then send the template copy"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Unreviewed AI text is never sent (unless a template has auto-approve on)."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Hold for up to (hours)"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Brand tone"
+msgstr ""
+
+#: build/admin.js:6
+msgid "AI drafts per scheduler run"
+msgstr ""
+
+#: build/admin.js:6
+msgid "0 turns off per-cart AI copy."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Brand notes for DEV3 AI"
+msgstr ""
+
+#: build/admin.js:6
+msgid "e.g. We are a family bakery. Never pushy, sign off as \"the Crumb team\"."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Send-time tuning"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Moves each send forward (never earlier) to the shopper's best hour, outside quiet hours in their own timezone."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Tune send times per shopper"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Quiet hours start"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Quiet hours end"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Preferred hours"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Used until your store has its own engagement data."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Send-time insights by DEV3 AI"
+msgstr ""
+
+#: build/admin.js:6
+msgid "DEV3 AI reads your open, click and order hours and suggests settings. Nothing changes until you accept."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Suggest send times with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Apply & save"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Send-time settings updated."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Recovery coupons"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Each step can create a unique, single-use coupon locked to the shopper's email. Set the discount per step in Sequences."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Code prefix"
+msgstr ""
+
+#. translators: %s: example code
+#: build/admin.js:6
+#, js-format
+msgid "Codes look like %s."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Delete unused coupons after they expire"
+msgstr ""
+
+#: build/admin.js:6
+msgid "SMS provider"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Any Twilio-compatible API (Twilio, SignalWire or a compatible gateway). Only shoppers who ticked the SMS box receive texts."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Ready"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Not configured"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Send test SMS"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Enable SMS"
+msgstr ""
+
+#: build/admin.js:6
+msgid "API base URL"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Twilio: https://api.twilio.com/2010-04-01"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Account SID"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Auth token"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Saved (encrypted). Type a new one to replace it."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Stored encrypted; never sent to the browser."
+msgstr ""
+
+#: build/admin.js:6
+msgid "From number"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Messaging service SID (optional)"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Used instead of the From number when set."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Past customers who have not ordered for a while get the win-back sequence, with their last order ready to buy again."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Enrol lapsed customers"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Inactive for (days)"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Look-back window (days)"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Customers whose last order falls in this window after the inactivity period are enrolled once."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Delete carts after (days)"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Finished carts and their messages are removed daily."
+msgstr ""
+
+#: build/admin.js:6
+msgid "\"Save my cart\" widget"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Block \"Save my cart\" and shortcode [dev3ac_save_cart] for the cart page."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Delete all plugin data on uninstall"
+msgstr ""
+
+#. translators: %d: count
+#: build/admin.js:6
+#, js-format
+msgid "%d unsubscribed addresses/numbers are suppressed (stored as hashes). Personal data export and erasure: Tools → Export / Erase Personal Data."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Test SMS sent."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Send"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Dashboard"
+msgstr ""
+
+#: build/admin.js:6
+msgid "API Config"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Usage Logs"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Connect Google Gemini, pick models and set a monthly AI budget. Cart recovery works without a key, using your approved templates."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Requests, tokens and estimated cost of every DEV3 AI feature."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Made by DEV3 Technologies · AI by Google Gemini, using your own API key."
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Lets shoppers email themselves a link to their cart (shown only when the cart has items)."
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Text"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Title"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Description"
+msgstr ""

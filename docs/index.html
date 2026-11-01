@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DEV3 AI Abandoned Cart &amp; Win-back Emails for WooCommerce – Documentation</title>
+<style>
+:root { --ink:#1f2328; --muted:#4b5563; --line:#e3e6eb; --brand:#4f46e5; --soft:#eef2ff; }
+* { box-sizing:border-box; }
+body { margin:0; font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:#fff; }
+header { background:linear-gradient(135deg,#4f46e5,#7c3aed); color:#fff; padding:40px 20px; }
+header h1 { margin:0 0 6px; font-size:28px; line-height:1.25; }
+header p { margin:0; opacity:.9; }
+.wrap { max-width:960px; margin:0 auto; }
+nav { border-bottom:1px solid var(--line); padding:12px 20px; position:sticky; top:0; background:#fff; overflow-x:auto; white-space:nowrap; }
+nav a { color:var(--brand); margin-right:16px; text-decoration:none; font-size:14px; }
+main { padding:8px 20px 60px; }
+h2 { margin-top:40px; padding-top:8px; border-top:1px solid var(--line); }
+h3 { margin-top:24px; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:.9em; }
+pre { background:#f3f4f6; padding:12px; border-radius:6px; overflow-x:auto; }
+table { width:100%; border-collapse:collapse; font-size:14px; }
+th, td { text-align:left; padding:8px; border-bottom:1px solid var(--line); vertical-align:top; }
+.note { background:var(--soft); border-left:4px solid var(--brand); padding:10px 14px; border-radius:4px; }
+img { max-width:100%; border:1px solid var(--line); border-radius:6px; }
+</style>
+</head>
+<body>
+<header><div class="wrap"><h1>DEV3 AI Abandoned Cart &amp; Win-back Emails for WooCommerce</h1><p>Version 1.0.0 · by DEV3 Technologies</p></div></header>
+<nav><div class="wrap"><a href="#install">Install</a><a href="#gemini">Gemini key</a><a href="#capture">Capture &amp; consent</a><a href="#sequences">Sequences</a><a href="#templates">Templates</a><a href="#ai">DEV3 AI</a><a href="#review">Review queue</a><a href="#coupons">Coupons</a><a href="#sendtime">Send time</a><a href="#sms">SMS</a><a href="#winback">Win-back</a><a href="#dashboard">Dashboard</a><a href="#privacy">Privacy</a><a href="#hooks">Hooks</a><a href="#faq">FAQ</a><a href="#changelog">Changelog</a></div></nav>
+<main class="wrap">
+
+<h2 id="install">Installation</h2>
+<ol>
+<li>Requirements: WordPress 6.0+, PHP 7.4+ (tested on 8.3), WooCommerce 8.0+.</li>
+<li>Plugins → Add New → Upload Plugin, choose <code>dev3-ai-abandoned-cart-for-woocommerce.zip</code>, then Activate.</li>
+<li>Open <strong>DEV3 AI Abandoned Cart</strong> in the admin menu. Two sequences (cart recovery and win-back) and six approved templates are ready to go.</li>
+<li>Check <strong>Settings → Capture &amp; consent</strong> and <strong>Settings → Sending</strong> (from name/address). Make sure your site can send email (an SMTP plugin is recommended).</li>
+<li>The scheduler runs every 5 minutes with WP-Cron. On low-traffic sites, set a real cron job that calls <code>wp-cron.php</code>, or press <em>Run scheduler now</em> on the dashboard.</li>
+</ol>
+<img src="screenshots/1-dashboard.png" alt="Recovered revenue dashboard">
+
+<h2 id="gemini">Google Gemini API key (optional)</h2>
+<ol>
+<li>Go to <a href="https://aistudio.google.com/app/apikey">Google AI Studio</a> and create an API key.</li>
+<li>Paste it in <strong>API Config</strong> and click Validate. The key is stored encrypted and never sent to the browser. You can also define <code>DEV3AC_GEMINI_API_KEY</code> in <code>wp-config.php</code>.</li>
+<li>Choose models (defaults: gemini-2.5-flash and gemini-2.5-pro), an optional monthly budget, and the AI on/off switch.</li>
+</ol>
+<p class="note">Without a key every recovery feature works with your approved templates.</p>
+
+<h2 id="capture">Cart capture &amp; consent</h2>
+<ul>
+<li><strong>Classic checkout:</strong> the email/phone/name fields are captured shortly after the shopper types them.</li>
+<li><strong>Block checkout:</strong> captured through the Store API (no script needed) plus the same field listener for consent and timezone.</li>
+<li><strong>Logged-in customers:</strong> carts are linked to the account email when the cart changes.</li>
+<li><strong>Save my cart:</strong> add the "Save my cart" block or <code>[dev3ac_save_cart title="" text="" button=""]</code> to the cart page; shoppers email themselves a cart link.</li>
+<li>A cart counts as abandoned after <em>Abandoned after (minutes)</em> without activity (default 15). Minimum cart value and excluded roles are available.</li>
+</ul>
+<table><tr><th>Consent mode</th><th>Behaviour</th></tr>
+<tr><td>Notice (default)</td><td>A short note under the email field explains that the cart is saved for reminders.</td></tr>
+<tr><td>Opt-in</td><td>A checkbox (classic and block checkout). Nothing personal is stored until it is ticked; unticking deletes the stored cart. Win-back reaches only customers who opted in.</td></tr>
+<tr><td>None</td><td>No notice (for stores outside GDPR regions).</td></tr></table>
+<p>SMS always needs its own opt-in checkbox. Every email has an unsubscribe link and <code>List-Unsubscribe</code> headers; unsubscribed emails/phones are stored as hashes and never contacted again.</p>
+
+<h2 id="sequences">Sequences</h2>
+<p>Each sequence has up to 10 steps: delay (from abandonment for step 1, then from the previous step), channel, template, optional unique coupon and minimum cart value. One sequence per type runs at a time. Purchases, unsubscribes and the admin's Stop action end a sequence; after the last step and <em>Mark lost after</em> days the cart is marked lost. Steps whose template is not approved, or SMS steps without consent/provider, are skipped and logged.</p>
+<img src="screenshots/4-sequences.png" alt="Sequence editor">
+
+<h2 id="templates">Templates</h2>
+<p>Email templates have subject, preheader, heading, body and button. The cart table, coupon box, button and unsubscribe footer are added automatically, inside your WooCommerce email design. SMS templates have one text field.</p>
+<p>Merge tags: <code>{first_name}</code> <code>{store_name}</code> <code>{cart_items}</code> <code>{cart_total}</code> <code>{item_count}</code> <code>{top_product}</code> <code>{recovery_url}</code> <code>{recovery_button}</code> <code>{coupon_code}</code> <code>{coupon_amount}</code> <code>{coupon_expiry}</code> <code>{unsubscribe_url}</code>.</p>
+<p>Only <strong>approved</strong> templates send. Editing the copy of an approved template moves it back to draft. Quality checks flag empty fields, long subjects, ALL CAPS, "!!!", spam words and missing links. Use <em>Send test</em> for a real email/SMS with a sample cart.</p>
+<img src="screenshots/3-template-editor.png" alt="Template editor with live preview">
+
+<h2 id="ai">DEV3 AI features</h2>
+<table><tr><th>Feature</th><th>Where</th><th>What changes</th></tr>
+<tr><td>Per-cart personalised copy</td><td>Template → "Personalise each message with DEV3 AI"</td><td>A draft per message; it waits in the Review queue unless the template has auto-approve on.</td></tr>
+<tr><td>Write with DEV3 AI</td><td>Template editor</td><td>A draft (plus subject ideas) you can apply to the editor; you still save and approve.</td></tr>
+<tr><td>Build with DEV3 AI</td><td>Sequences</td><td>Suggested steps with reasons; applied only when you click Apply and Save.</td></tr>
+<tr><td>Send-time insights</td><td>Settings → Sending &amp; timing</td><td>Suggested best hours, quiet hours and max shift; saved only when you accept.</td></tr>
+<tr><td>Recovery insights</td><td>Dashboard</td><td>Read-only findings and actions.</td></tr></table>
+<p>Per-cart copy runs in the scheduler, up to <em>AI drafts per scheduler run</em> (default 5). AI never runs on the storefront.</p>
+
+<h2 id="review">Review queue</h2>
+<p>Each AI draft is shown next to the template copy (filled in for that shopper) with a word diff. Approve (optionally after editing), reject (the template copy is sent) or regenerate. If a draft is still waiting at its send time:</p>
+<ul><li><strong>Send template copy</strong> (default): the approved template copy is sent on time.</li><li><strong>Hold</strong>: the message waits up to N hours for your review, then the template copy is sent.</li></ul>
+<img src="screenshots/2-review-queue.png" alt="Review queue">
+
+<h2 id="coupons">Recovery coupons</h2>
+<p>When a step has a coupon, a unique WooCommerce coupon is created for that cart and step: percent, fixed amount or free shipping, single use, individual use, restricted to the shopper's email, with an expiry and optional minimum spend. Later steps without their own coupon reuse the latest valid one in merge tags. The recovery link applies it automatically. Expired, unused codes are deleted daily (setting).</p>
+
+<h2 id="sendtime">Send-time tuning</h2>
+<p>Sends are only moved <em>later</em>, never earlier, within <em>Max shift</em> hours, to the hour with the best score: 3 × the shopper's own past order hours + 2 × their open/click hours + store-wide click hours + your preferred hours. Quiet hours use the shopper's browser timezone when known. The first cart reminder (due within 2 hours) moves at most 1 hour.</p>
+
+<h2 id="sms">SMS</h2>
+<p>Settings → SMS: API base URL (Twilio: <code>https://api.twilio.com/2010-04-01</code>; any Twilio-compatible API works), Account SID, Auth token (stored encrypted), From number or Messaging Service SID. Numbers are normalised to E.164 using the billing country. "Reply STOP to opt out." is appended when missing.</p>
+
+<h2 id="winback">Win-back</h2>
+<p>Hourly, customers whose last paid order is between <em>Inactive for</em> and <em>Inactive for + look-back window</em> days old are enrolled once into the win-back sequence (unless they unsubscribed or have an open cart sequence). Their last order's items are ready to re-order through the recovery link.</p>
+
+<h2 id="dashboard">Dashboard, carts and messages</h2>
+<p>The dashboard shows recovered revenue, recovery rate, still-recoverable value, captured carts, messages, opens/clicks and coupon redemptions, a daily abandoned vs recovered chart (with a table view), the per-step funnel, top abandoned products and recent recoveries. A cart is <em>recovered</em> when its order reaches processing/completed after a reminder was sent or the link was clicked; otherwise it is "bought anyway". The Carts screen lists every cart with a detail drawer (items, consent, timeline, actions: send next step now, stop, restart, copy link, delete). Messages lists every send with its copy source.</p>
+<img src="screenshots/5-cart-detail-mobile.png" alt="Cart detail on mobile" style="max-width:380px">
+
+<h2 id="privacy">Privacy &amp; GDPR</h2>
+<ul>
+<li>Personal data exporter and eraser (Tools → Export/Erase Personal Data) for carts and messages.</li>
+<li>Finished carts and their messages are deleted after <em>Delete carts after</em> days (default 90).</li>
+<li>A privacy-policy paragraph is added to Settings → Privacy.</li>
+<li>Google Gemini receives only the first name, product names/categories, cart total, offer and template copy. Emails and phone numbers are never sent.</li>
+</ul>
+
+<h2 id="hooks">Hooks for developers</h2>
+<table><tr><th>Hook</th><th>Type</th><th>Use</th></tr>
+<tr><td><code>dev3ac_capture_allowed( $allowed, $data )</code></td><td>filter</td><td>Block capture for some visitors.</td></tr>
+<tr><td><code>dev3ac_cart_items( $items )</code></td><td>filter</td><td>Change captured items.</td></tr>
+<tr><td><code>dev3ac_merge_tags( $tags, $cart, $message_id, $format )</code></td><td>filter</td><td>Add or change merge tags.</td></tr>
+<tr><td><code>dev3ac_email_args( $args )</code></td><td>filter</td><td>Change an outgoing email (to, subject, html, headers).</td></tr>
+<tr><td><code>dev3ac_sms_request( $request, $to )</code></td><td>filter</td><td>Change the SMS HTTP request (other gateways).</td></tr>
+<tr><td><code>dev3ac_coupon_args( $args, $cart, $step )</code></td><td>filter</td><td>Change recovery coupons.</td></tr>
+<tr><td><code>dev3ac_best_send_time( $ts, $cart, $step )</code></td><td>filter</td><td>Override send-time tuning.</td></tr>
+<tr><td><code>dev3ac_winback_days( $days )</code></td><td>filter</td><td>Inactivity days for win-back.</td></tr>
+<tr><td><code>dev3ac_recovery_redirect( $url, $cart )</code></td><td>filter</td><td>Where recovery links land.</td></tr>
+<tr><td><code>dev3ac_sweep_batch( $limit )</code></td><td>filter</td><td>Messages sent per scheduler run.</td></tr>
+<tr><td><code>dev3ac_prompt_cart_copy</code> (and other prompt ids)</td><td>filter</td><td>Override AI prompt templates.</td></tr>
+<tr><td><code>dev3ac_cart_abandoned( $cart )</code></td><td>action</td><td>A cart was marked abandoned.</td></tr>
+<tr><td><code>dev3ac_message_sent( $message, $cart )</code></td><td>action</td><td>A reminder was sent.</td></tr>
+<tr><td><code>dev3ac_cart_recovered( $cart, $order )</code></td><td>action</td><td>A cart or win-back turned into a paid order.</td></tr>
+<tr><td><code>dev3ac_unsubscribed( $value )</code></td><td>action</td><td>An email/phone unsubscribed.</td></tr></table>
+<p>REST API: <code>dev3ac/v1</code> (admin routes need <code>manage_options</code> and a REST nonce): bootstrap, config, dashboard, carts, messages, review, sequences, templates, sweep, ai/*. Public: <code>capture</code> and <code>save-cart</code> (same-origin, rate limited, return no personal data) and the signed open pixel <code>t/o</code>.</p>
+
+<h2 id="faq">FAQ</h2>
+<h3>Will AI text ever be sent without a human?</h3><p>Only for templates where you switched on "Auto-approve AI copy". Otherwise AI drafts wait for your approval and the approved template copy is the fallback.</p>
+<h3>Reminders are not going out.</h3><p>Check that the template is approved, sending is on, and WP-Cron runs (Dashboard shows the last run). Use "Run scheduler now" to test, and check Messages for skipped/failed reasons.</p>
+<h3>Does page caching break capture?</h3><p>No. The capture endpoint needs no nonce for guests and is protected by same-origin checks and rate limits.</p>
+<h3>Which currency is shown on the dashboard?</h3><p>The store currency; carts in other currencies are counted at face value.</p>
+<h3>Where is the data stored?</h3><p>In two custom tables (<code>wp_dev3ac_carts</code>, <code>wp_dev3ac_messages</code>) and options. Enable "Delete all plugin data on uninstall" to remove everything when deleting the plugin.</p>
+
+<h2 id="changelog">Changelog</h2>
+<p><strong>1.0.0</strong> – Initial release.</p>
+</main>
+</body>
+</html>

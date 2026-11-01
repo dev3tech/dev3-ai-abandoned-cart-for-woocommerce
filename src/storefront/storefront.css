@@ -1,0 +1,40 @@
+/* Shopper-facing styles: inherit the theme, small footprint, prefixed classes. */
+.dev3ac-consent-note { margin: 6px 0 12px; font-size: .85em; line-height: 1.45; opacity: .8; }
+.dev3ac-consent-note small { font-size: 1em; }
+.dev3ac-consent label, .dev3ac-consent--sms label { display: inline-flex; gap: .5em; align-items: flex-start; font-size: .9em; line-height: 1.45; }
+
+.dev3ac-save:not(#dev3ac-x) {
+	--dev3ac-line: rgba( 0, 0, 0, .14 );
+	--dev3ac-tint: rgba( 0, 0, 0, .03 );
+	--dev3ac-accent: currentColor;
+	box-sizing: border-box;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	padding: 1.1em 1.2em;
+	border: 1px solid var( --dev3ac-line );
+	border-radius: 10px;
+	background: var( --dev3ac-tint );
+	font: inherit;
+	color: inherit;
+}
+.dev3ac-save:not(#dev3ac-x) *, .dev3ac-save:not(#dev3ac-x) *::before { box-sizing: border-box; }
+.dev3ac-save:not(#dev3ac-x) .dev3ac-save__form { margin: 0; }
+.dev3ac-save:not(#dev3ac-x) .dev3ac-save__title { margin: 0 0 .2em; font-weight: 600; font-size: 1.05em; }
+.dev3ac-save:not(#dev3ac-x) .dev3ac-save__text { margin: 0 0 .8em; font-size: .92em; opacity: .85; }
+.dev3ac-save:not(#dev3ac-x) .dev3ac-save__row { display: flex; flex-wrap: wrap; gap: .5em; }
+.dev3ac-save:not(#dev3ac-x) .dev3ac-save__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset( 50% ); white-space: nowrap; }
+.dev3ac-save:not(#dev3ac-x) .dev3ac-save__input { flex: 1 1 200px; min-width: 0; min-height: 44px; margin: 0; padding: .55em .8em; border: 1px solid var( --dev3ac-line ); border-radius: 6px; background: #fff; color: #1f2328; font: inherit; font-size: 1em; }
+.dev3ac-save:not(#dev3ac-x) .dev3ac-save__input[aria-invalid="true"] { border-color: #b42318; }
+.dev3ac-save:not(#dev3ac-x) .dev3ac-save__btn { flex: 0 0 auto; min-height: 44px; margin: 0; padding: .55em 1.1em; border: 0; border-radius: 6px; background: #1f2328; color: #fff; font: inherit; font-weight: 600; cursor: pointer; text-transform: none; letter-spacing: normal; box-shadow: none; }
+.dev3ac-save:not(#dev3ac-x) .dev3ac-save__btn:hover { opacity: .9; }
+.dev3ac-save:not(#dev3ac-x) .dev3ac-save__btn:focus-visible, .dev3ac-save:not(#dev3ac-x) .dev3ac-save__input:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+.dev3ac-save:not(#dev3ac-x) .dev3ac-save__btn[disabled] { opacity: .6; cursor: default; }
+.dev3ac-save:not(#dev3ac-x) .dev3ac-save__consent { display: flex; gap: .5em; align-items: flex-start; margin: .7em 0 0; font-size: .85em; line-height: 1.45; }
+.dev3ac-save:not(#dev3ac-x) .dev3ac-save__consent input { width: 18px; height: 18px; margin: .15em 0 0; flex: 0 0 auto; }
+.dev3ac-save:not(#dev3ac-x) .dev3ac-save__note { margin: .7em 0 0; font-size: .8em; opacity: .75; }
+.dev3ac-save:not(#dev3ac-x) .dev3ac-save__status { margin: .6em 0 0; min-height: 1.4em; font-size: .9em; font-weight: 600; }
+.dev3ac-save:not(#dev3ac-x) .is-done .dev3ac-save__row { display: none; }
+@media ( max-width: 480px ) {
+	.dev3ac-save:not(#dev3ac-x) .dev3ac-save__btn { flex-basis: 100%; }
+}
+.dev3ac-save:not(#dev3ac-x) .dev3ac-save__status:empty { display: none; }

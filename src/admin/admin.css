@@ -1,0 +1,104 @@
+/* DEV3 AI Abandoned Cart admin screens (scoped to .dev3ac-root). */
+.dev3ac-root {
+	--dev3ac-viz-abandoned: #eb6834;
+	--dev3ac-viz-recovered: #2a78d6;
+}
+.dev3ac-root .dev3ac-muted { color: var( --dev3ac-text-muted ); font-size: 13px; margin: 0; }
+.dev3ac-root .dev3ac-ok { color: var( --dev3ac-success ); margin: 0; }
+.dev3ac-root .dev3ac-h3 { font-size: 14px; font-weight: 600; margin: 20px 0 8px; }
+
+/* Chart */
+.dev3ac-root .dev3ac-chart__head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+.dev3ac-root .dev3ac-chart__legend { display: flex; flex-wrap: wrap; gap: 16px; margin: 0; padding: 0; list-style: none; font-size: 13px; color: var( --dev3ac-text-muted ); }
+.dev3ac-root .dev3ac-chart__legend li { display: inline-flex; align-items: center; gap: 6px; margin: 0; }
+.dev3ac-root .dev3ac-chart__swatch { display: inline-block; width: 10px; height: 10px; border-radius: 3px; background: var( --dev3ac-viz-recovered ); }
+.dev3ac-root .dev3ac-chart__swatch.is-abandoned { background: var( --dev3ac-viz-abandoned ); }
+.dev3ac-root .dev3ac-chart__plot { position: relative; width: 100%; overflow: hidden; }
+.dev3ac-root .dev3ac-chart__plot svg { display: block; }
+.dev3ac-root .dev3ac-chart__grid { stroke: var( --dev3ac-border ); stroke-width: 1; }
+.dev3ac-root .dev3ac-chart__axis { stroke: var( --dev3ac-border-strong ); stroke-width: 1; }
+.dev3ac-root .dev3ac-chart__tick { fill: var( --dev3ac-text-subtle ); font-size: 11px; }
+.dev3ac-root .dev3ac-chart__bar { fill: var( --dev3ac-viz-recovered ); }
+.dev3ac-root .dev3ac-chart__bar.is-abandoned { fill: var( --dev3ac-viz-abandoned ); }
+.dev3ac-root .dev3ac-chart__bar.is-hover { opacity: .8; }
+.dev3ac-root .dev3ac-chart__empty { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; margin: 0; color: var( --dev3ac-text-muted ); font-size: 13px; pointer-events: none; }
+.dev3ac-root .dev3ac-chart__tip { position: absolute; top: 4px; width: 180px; padding: 8px 10px; background: var( --dev3ac-surface ); border: 1px solid var( --dev3ac-border ); border-radius: var( --dev3ac-radius-sm ); box-shadow: var( --dev3ac-shadow-pop ); font-size: 12px; display: flex; flex-direction: column; gap: 4px; pointer-events: none; color: var( --dev3ac-text ); }
+.dev3ac-root .dev3ac-chart__tip span { display: flex; align-items: center; gap: 6px; }
+.dev3ac-root .dev3ac-chart__table { max-height: 260px; overflow: auto; }
+.dev3ac-root .dev3ac-chart__table table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.dev3ac-root .dev3ac-chart__table th, .dev3ac-root .dev3ac-chart__table td { padding: 6px 8px; border-bottom: 1px solid var( --dev3ac-border ); text-align: left; }
+
+/* Insights */
+.dev3ac-root .dev3ac-insights__headline { font-weight: 600; margin: 0 0 8px; }
+.dev3ac-root .dev3ac-insights h4 { font-size: 13px; margin: 12px 0 4px; color: var( --dev3ac-text-muted ); text-transform: uppercase; letter-spacing: .04em; }
+.dev3ac-root .dev3ac-insights ul { margin: 0 0 8px 18px; padding: 0; list-style: disc; }
+.dev3ac-root .dev3ac-insights li { margin: 0 0 4px; }
+
+/* Toolbars */
+.dev3ac-root .dev3ac-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var( --dev3ac-border ); }
+.dev3ac-root .dev3ac-toolbar > :first-child { min-width: 0; max-width: 100%; }
+.dev3ac-root .dev3ac-search { display: flex; gap: 8px; align-items: flex-end; flex: 0 1 340px; min-width: 0; }
+.dev3ac-root .dev3ac-search > :first-child { flex: 1; min-width: 0; }
+.dev3ac-root .dev3ac-who { display: flex; flex-direction: column; min-width: 0; }
+.dev3ac-root .dev3ac-who small { color: var( --dev3ac-text-muted ); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 320px; }
+
+/* Cart detail */
+.dev3ac-root .dev3ac-dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; margin: 16px 0 0; font-size: 13px; }
+.dev3ac-root .dev3ac-dl dt { color: var( --dev3ac-text-muted ); }
+.dev3ac-root .dev3ac-dl dd { margin: 0; overflow-wrap: anywhere; }
+.dev3ac-root .dev3ac-items { margin: 0; padding: 0; list-style: none; border: 1px solid var( --dev3ac-border ); border-radius: var( --dev3ac-radius ); }
+.dev3ac-root .dev3ac-items li { display: flex; justify-content: space-between; gap: 12px; padding: 8px 12px; margin: 0; border-bottom: 1px solid var( --dev3ac-border ); font-size: 13px; }
+.dev3ac-root .dev3ac-items li:last-child { border-bottom: 0; }
+.dev3ac-root .dev3ac-items li small { display: block; color: var( --dev3ac-text-muted ); }
+.dev3ac-root .dev3ac-items li.is-total { font-weight: 600; background: var( --dev3ac-surface-alt, #f8f9fb ); }
+.dev3ac-root .dev3ac-timeline { margin: 0; padding: 0 0 0 16px; list-style: none; border-left: 2px solid var( --dev3ac-border ); }
+.dev3ac-root .dev3ac-timeline li { position: relative; margin: 0 0 12px; padding-left: 8px; }
+.dev3ac-root .dev3ac-timeline li::before { content: ""; position: absolute; left: -23px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var( --dev3ac-surface ); border: 2px solid var( --dev3ac-brand ); }
+.dev3ac-root .dev3ac-timeline__row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13px; }
+.dev3ac-root .dev3ac-detail__actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; padding-top: 16px; border-top: 1px solid var( --dev3ac-border ); }
+
+/* Sequences */
+.dev3ac-root .dev3ac-seqhead { display: grid; grid-template-columns: repeat( auto-fit, minmax( 200px, 1fr ) ); gap: 12px 16px; align-items: start; }
+.dev3ac-root .dev3ac-steps { margin: 4px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.dev3ac-root .dev3ac-step { margin: 0; padding: 12px 16px 16px; border: 1px solid var( --dev3ac-border ); border-radius: var( --dev3ac-radius ); background: var( --dev3ac-surface ); }
+.dev3ac-root .dev3ac-step__head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 12px; }
+.dev3ac-root .dev3ac-step__head > strong { flex: 1 1 200px; font-size: 14px; }
+.dev3ac-root .dev3ac-step__num { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background: var( --dev3ac-brand-soft ); color: var( --dev3ac-brand-ink ); font-weight: 600; font-size: 13px; }
+.dev3ac-root .dev3ac-step__grid { display: grid; grid-template-columns: repeat( auto-fit, minmax( 150px, 1fr ) ); gap: 12px; align-items: start; }
+.dev3ac-root .dev3ac-step__coupon { margin-top: 12px; display: flex; flex-direction: column; gap: 12px; }
+.dev3ac-root .dev3ac-aisteps { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; }
+.dev3ac-root .dev3ac-aisteps li { display: flex; flex-direction: column; gap: 2px; margin: 0; }
+
+/* Templates */
+.dev3ac-root .dev3ac-form2 { display: grid; grid-template-columns: repeat( auto-fit, minmax( 200px, 1fr ) ); gap: 12px 16px; align-items: end; }
+.dev3ac-root .dev3ac-tags, .dev3ac-root .dev3ac-ideas { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.dev3ac-root .dev3ac-tag { appearance: none; border: 1px solid var( --dev3ac-border-strong ); background: var( --dev3ac-surface ); color: var( --dev3ac-text ); border-radius: 999px; padding: 4px 10px; min-height: 28px; font: 12px/1.3 var( --dev3ac-mono ); cursor: pointer; }
+.dev3ac-root .dev3ac-ideas .dev3ac-tag { font-family: inherit; }
+.dev3ac-root .dev3ac-tag:hover { border-color: var( --dev3ac-brand ); color: var( --dev3ac-brand-ink ); }
+.dev3ac-root .dev3ac-tag:focus-visible { outline: none; box-shadow: var( --dev3ac-focus ); }
+.dev3ac-root .dev3ac-inbox { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; margin-bottom: 12px; border: 1px solid var( --dev3ac-border ); border-radius: var( --dev3ac-radius-sm ); font-size: 13px; }
+.dev3ac-root .dev3ac-inbox span { color: var( --dev3ac-text-muted ); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dev3ac-root .dev3ac-preview-frame { display: block; width: 100%; height: 560px; border: 1px solid var( --dev3ac-border ); border-radius: var( --dev3ac-radius-sm ); background: #f7f7f7; }
+.dev3ac-root .dev3ac-sms { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding: 16px; background: #f3f4f6; border-radius: var( --dev3ac-radius ); }
+.dev3ac-root .dev3ac-sms__bubble { max-width: 320px; padding: 10px 14px; border-radius: 18px 18px 18px 4px; background: #fff; border: 1px solid var( --dev3ac-border ); font-size: 14px; line-height: 1.45; white-space: pre-wrap; overflow-wrap: anywhere; }
+.dev3ac-root .dev3ac-checks { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.dev3ac-root .dev3ac-checks li { display: flex; align-items: flex-start; gap: 8px; margin: 0; font-size: 13px; }
+
+/* Settings */
+.dev3ac-root .dev3ac-checkgrid { display: grid; grid-template-columns: repeat( auto-fill, minmax( 170px, 1fr ) ); gap: 8px 16px; }
+.dev3ac-root .dev3ac-hourpick { display: grid; grid-template-columns: repeat( 12, minmax( 0, 1fr ) ); gap: 4px; max-width: 560px; }
+.dev3ac-root .dev3ac-hourpick__h { appearance: none; min-height: 36px; border: 1px solid var( --dev3ac-border-strong ); border-radius: var( --dev3ac-radius-sm ); background: var( --dev3ac-surface ); color: var( --dev3ac-text ); font: 12px/1 var( --dev3ac-mono ); cursor: pointer; padding: 0; }
+.dev3ac-root .dev3ac-hourpick__h.is-on { background: var( --dev3ac-brand ); border-color: var( --dev3ac-brand ); color: #fff; }
+.dev3ac-root .dev3ac-hourpick__h:focus-visible { outline: none; box-shadow: var( --dev3ac-focus ); }
+.dev3ac-root .dev3ac-hours { margin: 0 0 12px; }
+.dev3ac-root .dev3ac-hours__plot { display: flex; align-items: flex-end; gap: 2px; height: 72px; border-bottom: 1px solid var( --dev3ac-border-strong ); }
+.dev3ac-root .dev3ac-hours__bar { flex: 1; background: var( --dev3ac-viz-recovered ); border-radius: 3px 3px 0 0; }
+.dev3ac-root .dev3ac-hours__axis { display: flex; justify-content: space-between; font-size: 11px; color: var( --dev3ac-text-subtle ); margin: 4px 0; }
+
+@media ( max-width: 600px ) {
+	.dev3ac-root .dev3ac-hourpick { grid-template-columns: repeat( 6, minmax( 0, 1fr ) ); }
+	.dev3ac-root .dev3ac-search { flex-basis: 100%; }
+	.dev3ac-root .dev3ac-preview-frame { height: 460px; }
+	.dev3ac-root .dev3ac-dl { grid-template-columns: 1fr; gap: 2px; }
+	.dev3ac-root .dev3ac-dl dd { margin-bottom: 8px; }
+}
